@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* @font-face {
+  font-family: 'ArcadeClassic';
+  src: url('fonts/ARCADECLASSIC.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    color: #eee;
+    padding: 20px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background 0.3s ease;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background: rgb(32, 32, 32);
+    backdrop-filter: blur(5px);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+li span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+li:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+
+.n1 {
+    line-height: 0.9;
+    margin-left: 10px;
+}
+
+
+.n2 {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.n3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.titulo {
+  position: relative;
+  cursor: pointer;
+}
+
+.titulo::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: #fff;
+  padding: 6px 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.titulo:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.logo {
+    margin-right: 10px;
+}
+
+.somos {
+    margin-right: 10px;
+}
+
+.n1 a, .n2 a, .n3 a {
+    text-decoration: none;
+    color: #eee;
+    transition: transform 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.n1 a:hover, .n2 a:hover, .n3 a:hover {
+    color: rgb(236, 70, 70);
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+h2 {
+    color: #eee;
+    font-size: 25px;
+    margin: 25px;
+    padding: 25px;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: lighter;
+
+}
+
+body::selection {
+    background-color: rgb(236, 70, 70);
+}
+
+.rpg {
+    padding: 30px;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+#rpg {
+    text-align: left;
+}
+
+.jogo {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.jogo:hover img {
+  transform: scale(1.05);
+}
+
+.jogo .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.jogo:hover .info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.jogos img {
+    margin: 30px;
+    width: 450px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.jogos img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 3px rgba(24, 24, 24, 0.452);
+}
+
+.fps {
+    padding: 30px;
+    background-color: rgb(63, 63, 63);
+    text-align: center;
+}
+
+#fps {
+    text-align: left;
+}
+
+.indie {
+    padding: 30px;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+#indie {
+    text-align: left;
+}
+
+.indie .hollow, .indie .cuphead {
+    width: 449px;
+}
+
+.fps .apex {
+    width: 441px;
+}
+
+.fps .warzone {
+    width: 443px;
+}
+
+.fps .overwatch {
+    width: 441px;
+}
+
+.principais img{
+    width: 600px;
+}
+
+.secundarios img {
+    width: 400px;
+}
+
+.multiplayer {
+    padding: 30px;
+    background-color: rgb(63, 63, 63);
+    text-align: center;
+}
+
+#multiplayer {
+    text-align: left;
+}
+
+
+.tresA {
+    padding: 30px;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+#tresA {
+    text-align: left;
+}
+
+.multiplayer .minecraft {
+    width: 449px;
+}
+
+.multiplayer .peak {
+    width: 442px;
+}
+
+.container img {
+    width: 100%;
+    display: block;
+}
+
+
+.nos {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fcfcfc;
+}
+
+
+.nos h2 {
+    color: #202020;
+    text-align: center;
+}
+
+.nos p {
+    margin: 10px 30px;
+    color: #313131;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+}
+
+.nos img {
+    display: block;
+}
+
+.texto {
+    margin: 10px 30px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #4d4d4d10;
+}
+
+footer {
+    padding: 30px;
+    background-color: rgb(32, 32, 32);
+    text-transform: uppercase;
+    font-size: 12px;
+    align-items: center;
+}
+
+footer span {
+    color: #eee;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+
+.criadores {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 30px;
+    padding: 20px;
+}
+
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 30px;
+    padding: 30px;
+    border-top: 1px solid #555 ;
+
+}
+
+.copyright a {
+    text-decoration: none;
+}
+
+.top-link {
+    color: #eee;
+    font-weight: bold;
+    
+}
+
+.top-link:hover {
+    color: rgb(236, 70, 70);
+    transition: 0.3s;
+}
+
+.insta {
+    color: #eee;
+    font-size: 16px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+.insta:hover {
+    color: rgb(236, 70, 70);
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.v-middle {
+    vertical-align: middle;
+}
+
+@media (min-width: 1440px) {
+  .jogo img {
+    max-width: 90%;
+    height: auto;
+    margin: 5px;
+  }
+}
+
+
